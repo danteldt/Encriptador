@@ -1,0 +1,200 @@
+
+html, body{
+background-color: #E5E5E5;
+position: relative;	
+width: 1440px;
+height: 1024px;
+}
+
+header{
+position: absolute;
+left: 84px;
+top: 40px;
+right: 1324.91px;
+bottom: 936px;
+}
+
+.resultado{
+position: relative;
+width: 400px;
+height: 944px;
+left: 1000px;
+top: 40px;
+right: 40px;
+background: #FFFFFF;
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+border-radius: 32px;
+text-align: center;
+}
+
+.muñeco{
+position: absolute;
+width: 336px;
+height: 304px;
+top: 243px;
+left: 32px;
+margin: 0px auto;
+}
+
+
+
+.mensaje{
+position: absolute;
+display: block;
+width: 577px;
+height: 300px;
+left: 240px;
+top: 168px;
+font-weight: 400;
+font-size: 32px;
+line-height: 150%;
+border: none;
+outline-color: #D5D5D5 ;
+background-color: #E5E5E5;
+resize: none;
+}
+
+.epigrafe1{
+display: inline-block;
+font-family: cursive  ;
+font-style: normal;
+position: absolute;
+top: 599px;
+left: 32px;
+width: 336px;
+height: 58px;
+font-weight: 700;
+font-size: 28px;
+line-height: 120%;
+text-align: center;
+color: #343A40;
+}
+
+.epigrafe2{
+position: relative;
+top: 733px;
+left: 32px;
+width: 336px;
+height: 48px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #495057;
+}
+
+
+
+
+.encriptar{
+position: absolute;
+display: inline-block;
+padding: 24px;
+gap: 8px;
+width: 332px;
+height: 67px;
+background: #0A3871;
+border-radius: 24px;
+top: 885px;
+left: 230px;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: white;
+transition: 1s all;
+cursor:pointer;
+border: 1px;
+}
+
+
+.desencriptar{
+position: absolute;
+display: inline-block;
+padding: 24px;
+gap: 8px;
+width: 328px;
+height: 67px;
+background: rgba(216, 223, 232, 1);
+border-radius: 24px;
+top: 885px;
+left: 582px;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: darkblue;
+border: 1px solid #0A3871;
+transition: 1s all;
+cursor:pointer;
+}
+
+
+.encriptar:hover{
+background: darkblue;
+ transform: scale(1.1);
+}
+
+
+.desencriptar:hover{
+background: lightgrey;
+ transform: scale(1.1);
+}
+.respuesta{
+	display: block;
+position: absolute;
+width: 336px;
+height: 781px;
+left: 1032px;
+top: 72px;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 150%;
+color: #495057;
+}
+
+.aclaracion{
+position: absolute;
+top: 851px;
+left: 264px;
+width: 205px;
+height: 18px;
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+color: #495057;
+opacity: 0.8;
+font: none	;
+margin: 0px auto;
+}
+.alerta{
+position: absolute;
+left: 240px;
+top: 851px;
+}
+
+.copiar{
+position: absolute;
+width: 336px;
+height: 67px;
+left: 1032px;
+top: 885px;
+display: inline-block;
+padding: 24px;
+gap: 8px;
+width: 328px;
+height: 67px;
+background:#FFFFFF;
+border-radius: 24px;	
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: darkblue;
+border: 1px solid #0A3871;
+transition: 1s all;
+cursor:pointer;
+}
+.copiar:hover{
+background: lightgrey;
+ transform: scale(1.1);
+}

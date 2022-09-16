@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+			<title>Encriptador de mensajes</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" type="text/css" href="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\encriptador.css">
+	</head>
+
+	<body>
+		<header>
+			<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\vector.png">
+		</header>
+		<main>
+			<div class="resultado">
+			<div class="rsp1" id="rsp1">
+				<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\muñeco.png" id="muñeco" class="muñeco">
+				<p class="epigrafe1"> Ningún mensaje fue encontrado </p>
+				<p class="epigrafe2"> Ingresa el texto que desees encriptar o desencriptar.  </p>
+			</div>
+			</div>
+
+		 	<form>
+				<textarea id="mensaje" class="mensaje" name="mensaje" required placeholder="Introduce el texto aqui"></textarea>
+				<input type="button" value="Encriptar" id="encriptar"class="encriptar">
+				<input type="button" value="Desencriptar" id="desencriptar" class="desencriptar">
+				<p class="respuesta" id="respuesta"> </p>
+			 	<input type="button" value="Copiar" id="copiar" class="copiar" contenteditable="true">
+			</form>
+			<p class="aclaracion">  Solo letras minúsculas y sin acentos </p>
+		 	<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\alerta.png" class="alerta">
+		</main>
+	</body>
+</html>			
+
+
+
+<script type="text/javascript">
+
+	var boton1= document.getElementById("encriptar")
+	var boton2= document.getElementById("desencriptar")
+	var boton3 = document.getElementById("copiar")
+	var respuesta = document.getElementById("respuesta")
+	var muñeco = document.getElementById("rsp1")
+	var texto = document.getElementById("mensaje").value
+	
+	
+	function reemplazar(){
+
+		if (respuesta.innerHTML.length > 0){
+			muñeco.style.display = "none"
+		}		
+		else{
+			muñeco.style.display = "block"
+		}
+	}
+
+	function desencriptar(){
+		var texto = document.getElementById("mensaje").value
+		var respuesta = document.getElementById("respuesta")
+		respuesta.innerHTML = texto
+		reemplazar()
+	}
+
+
+	function encriptar1(){
+		var texto = document.getElementById("mensaje").value
+		texto= texto.replaceAll ("i", "imes")
+		texto= texto.replaceAll ("a", "ai")
+		texto= texto.replaceAll ("e", "enter")
+		texto= texto.replaceAll ("o", "ober")
+		texto= texto.replaceAll ("u", "ufat")
+		respuesta.innerHTML = texto
+		reemplazar()
+	}
+	
+	function copiar(){
+		var aux = document.createElement("input");
+  		aux.setAttribute("value", document.getElementById("respuesta").innerHTML);
+ 		document.body.appendChild(aux);
+ 		aux.select();
+  		document.execCommand("copy");
+  		document.body.removeChild(aux);	
+		}
+
+	boton1.onclick= encriptar1
+	boton2.onclick= desencriptar
+	boton3.onclick= copiar
+</script>
