@@ -70,8 +70,7 @@
 
 	function encriptar1(){
 		var texto = document.getElementById("mensaje").value
-		texto= texto.replaceAll ("e", "enter")
-		texto= texto.replaceAll ("i", "imes")
+		texto= texto.replaceAll ("e", "enter") && texto.replaceAll ("i", "imes")
 		texto= texto.replaceAll ("a", "ai")
 		texto= texto.replaceAll ("o", "ober")
 		texto= texto.replaceAll ("u", "ufat")
