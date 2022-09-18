@@ -5,17 +5,17 @@
 	<head>
 			<title>Encriptador de mensajes</title>
 			<meta charset="utf-8">
-			<link rel="stylesheet" type="text/css" href="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\encriptador.css">
+			<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 
 	<body>
 		<header>
-			<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\vector.png">
+			<img src="vector.png">
 		</header>
 		<main>
 			<div class="resultado">
 			<div class="rsp1" id="rsp1">
-				<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\muñeco.png" id="muñeco" class="muñeco">
+				<img src="muñeco.png" id="muñeco" class="muñeco">
 				<p class="epigrafe1"> Ningún mensaje fue encontrado </p>
 				<p class="epigrafe2"> Ingresa el texto que desees encriptar o desencriptar.  </p>
 			</div>
@@ -29,7 +29,7 @@
 			 	<input type="button" value="Copiar" id="copiar" class="copiar" contenteditable="true">
 			</form>
 			<p class="aclaracion">  Solo letras minúsculas y sin acentos </p>
-		 	<img src="C:\Users\benja\OneDrive\Escritorio\html\Encriptador\alerta.png" class="alerta">
+		 	<img src="alerta.png" class="alerta">
 		</main>
 	</body>
 </html>			
@@ -58,7 +58,11 @@
 
 	function desencriptar(){
 		var texto = document.getElementById("mensaje").value
-		var respuesta = document.getElementById("respuesta")
+		texto= texto.replaceAll ("imes", "i")
+		texto= texto.replaceAll ("ai", "a")
+		texto= texto.replaceAll ("enter", "e")
+		texto= texto.replaceAll ("ober", "o")
+		texto= texto.replaceAll ("ufat", "u")
 		respuesta.innerHTML = texto
 		reemplazar()
 	}
